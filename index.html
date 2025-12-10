@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
     <title>Par🇮🇹le - Un gioco di parole al giorno (Wordle in italiano)</title>
-    <!--<meta name="description" content="Guess the hidden word in 6 tries. A new puzzle is available each day.">-->
     <meta name="description" content="Indovina la parola nascosta in 6 tentativi. Un nuovo puzzle ogni giorno.">
     
     <!-- FB Meta Tags -->
@@ -25,16 +24,12 @@
     <link href="images/parle_logo_192x192.png" rel="apple-touch-icon" />
     <script>
      function randomAnalytics() {
-      // analytics are loaded once every X times
       const times = 40;
-
-      // pick a random number
       var index = Math.floor(Math.random()*times);
       console.log(index)
 
       if (index === 0) {
         console.log("loading analytics")
-        // Append JS file to head section.
         var script = document.createElement('script');
         script.defer = true
         script.setAttribute('data-domain', 'pietroppeter.github.io/wordle-it')
@@ -58,7 +53,6 @@
         --darkGray: #939598;
         --white: #fff;
         --black: #212121;
-        /* Colorblind colors */
         --orange: #f5793a;
         --blue: #85c0f9;
         font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -67,7 +61,6 @@
         --keyboard-height: 200px;
         --game-max-width: 500px;
       }
-      /* Light theme colors */
       :root {
         --color-tone-1: #1a1a1b;
         --color-tone-2: #787c7e;
@@ -78,7 +71,6 @@
         --color-tone-7: #ffffff;
         --opacity-50: rgba(255, 255, 255, 0.5);
       }
-      /* Dark Theme Colors */
       .nightmode {
         --color-tone-1: #d7dadc;
         --color-tone-2: #818384;
@@ -89,7 +81,6 @@
         --color-tone-7: #121213;
         --opacity-50: rgba(0, 0, 0, 0.5);
       }
-      /* Constant colors and colors derived from theme */
       :root,
       .nightmode {
         --color-background: var(--color-tone-7);
@@ -136,20 +127,239 @@
         background-color: var(--color-background);
         margin: 0;
         padding: 0;
-        /* Prevent scrollbar appearing on page transition */
-        overflow-y: hidden;
+        overflow-y: auto;
+      }
+      
+      /* Article Styles */
+      article {
+        max-width: 750px;
+        margin: 50px auto;
+        padding: 30px 25px;
+        background-color: var(--color-tone-7);
+        color: var(--color-tone-1);
+        line-height: 1.8;
+      }
+      
+      article h1 {
+        font-size: 1.9em;
+        margin-bottom: 25px;
+        color: var(--green);
+        font-weight: 700;
+      }
+      
+      article h2 {
+        font-size: 1.4em;
+        margin-top: 35px;
+        margin-bottom: 18px;
+        color: var(--darkendGreen);
+        font-weight: 600;
+      }
+      
+      article p {
+        margin-bottom: 18px;
+        font-size: 1.05em;
+      }
+      
+      article strong {
+        color: var(--green);
+        font-weight: 600;
       }
     </style>
   </head>
   <body onload="randomAnalytics();">
     <script>
       (function () {
-        // Defining the hash before the main bundle allows the bundle access window.hash
         window.wordle = window.wordle || {};
         window.wordle.hash = 'parle v220317';
       })();
     </script>
     <script src="wordle-it.js"></script>
     <game-app></game-app>
+    
+    <!-- Article Section -->
+    <article>
+      <h1>PAR🇮🇹LE: Il Gioco di Parole che Sta Conquistando l'Italia</h1>
+
+      <p>
+        Quando la mattina apro il telefono, la prima cosa che faccio è controllare PAR🇮🇹LE. 
+        Sì, lo ammetto, è diventata una piccola abitudine quotidiana. E non sono l'unico. 
+        Milioni di italiani ogni giorno si cimentano con questo semplice ma coinvolgente gioco di parole.
+      </p>
+
+      <p>
+        Ma cos'ha di speciale PAR🇮🇹LE? Perché questo gioco è diventato così popolare? 
+        Te lo racconto in modo semplice, come se stessimo chiacchierando davanti a un caffè.
+      </p>
+
+      <h2>Cos'è PAR🇮🇹LE e Come Funziona</h2>
+
+      <p>
+        PAR🇮🇹LE è fondamentalmente la versione italiana di Wordle. L'idea è semplice: 
+        devi indovinare una parola di cinque lettere. Hai sei tentativi a disposizione. 
+        Dopo ogni tentativo, il gioco ti dà degli indizi attraverso i colori.
+      </p>
+
+      <p>
+        Se una lettera diventa verde, significa che hai azzeccato sia la lettera che la posizione. 
+        Il giallo invece ti dice che la lettera c'è, ma l'hai messa nel posto sbagliato. 
+        Il grigio? Quella lettera non fa parte della parola. Tutto qui.
+      </p>
+
+      <p>
+        La cosa bella è che non serve scaricare app o registrarsi. Apri il browser, 
+        vai sul sito e inizi a giocare. Punto. Funziona benissimo sia su telefono che su computer.
+      </p>
+
+      <h2>Perché PAR🇮🇹LE Piace Così Tanto</h2>
+
+      <p>
+        Onestamente? La prima volta che ho giocato, non mi aspettavo di rimanere così preso. 
+        Ma c'è qualcosa in questo gioco che ti prende. Forse è proprio la semplicità. 
+        Non ci sono mille regole da imparare, non servono strategie complicate.
+      </p>
+
+      <p>
+        E poi c'è un altro aspetto interessante: ogni giorno c'è una sola parola da indovinare. 
+        Questo significa che tutti i giocatori in Italia stanno cercando di scoprire la stessa parola. 
+        È diventato quasi un rituale collettivo. Ti capita mai di sentire qualcuno dire 
+        "hai fatto PAR🇮🇹LE oggi?" al lavoro o tra amici?
+      </p>
+
+      <p>
+        Molti lo giocano al mattino con il caffè. Altri durante la pausa pranzo. 
+        C'è chi lo fa prima di dormire. Ognuno ha il suo momento preferito, 
+        ma tutti condividono questa piccola sfida quotidiana.
+      </p>
+
+      <h2>Strategie per Giocare Meglio a PAR🇮🇹LE</h2>
+
+      <p>
+        All'inizio giocavo completamente a caso. Scrivevo la prima parola che mi veniva in mente. 
+        Poi, giocando ogni giorno, ho capito che ci sono dei trucchetti che aiutano parecchio.
+      </p>
+
+      <p>
+        La prima mossa è fondamentale. Io di solito inizio con parole come <strong>PIANO</strong>, 
+        <strong>TERRA</strong> o <strong>AMORE</strong>. Il motivo? Hanno tante vocali diverse. 
+        Le vocali sono importantissime perché quasi ogni parola italiana ne contiene almeno due o tre.
+      </p>
+
+      <p>
+        Un altro consiglio che do sempre: non sprecare tentativi con lettere che sai già essere sbagliate. 
+        Se una lettera è diventata grigia, lasciala perdere. Concentrati su quelle che potrebbero funzionare.
+      </p>
+
+      <p>
+        E non avere fretta! PAR🇮🇹LE non ha un timer. Puoi prenderti tutto il tempo che vuoi 
+        per pensare alla prossima parola. A volte basta fermarsi un attimo, respirare, 
+        e la soluzione arriva da sola.
+      </p>
+
+      <h2>La Parola del Giorno: Quando Serve un Aiuto</h2>
+
+      <p>
+        Ci sono giornate in cui la parola sembra impossibile da indovinare. 
+        Capitano quelle parole strane che usi raramente. In quei momenti, 
+        è normale cercare un piccolo aiuto o un indizio.
+      </p>
+
+      <p>
+        Molti cercano online "PAR🇮🇹LE oggi" o "soluzione PAR🇮🇹LE". 
+        Onestamente, lo capisco. Meglio un piccolo suggerimento che perdere la striscia di vittorie consecutive, no?
+      </p>
+
+      <p>
+        Però ti consiglio di cercare solo degli indizi, non la soluzione diretta. 
+        Così mantieni il divertimento della scoperta. È molto più soddisfacente indovinarla da solo, 
+        anche se ci hai messo tutti e sei i tentativi.
+      </p>
+
+      <h2>I Benefici Nascosti di PAR🇮🇹LE</h2>
+
+      <p>
+        Sai qual è la cosa che non mi aspettavo? Che giocare a PAR🇮🇹LE ogni giorno 
+        mi ha fatto scoprire parole nuove. Non parlo di termini complicati o tecnici, 
+        ma di parole italiane comuni che semplicemente non usavo mai.
+      </p>
+
+      <p>
+        È come un piccolo allenamento per il cervello. Cinque minuti al giorno, 
+        ma ti obbligano a pensare, ragionare, fare collegamenti. 
+        E tutto questo senza sentirsi sotto pressione o stressati.
+      </p>
+
+      <p>
+        Alcuni studi hanno dimostrato che i giochi di parole aiutano a mantenere la mente attiva, 
+        migliorano la memoria e aumentano la concentrazione. Con PAR🇮🇹LE, ottieni tutto questo 
+        mentre ti diverti. Non male come affare.
+      </p>
+
+      <h2>PAR🇮🇹LE per Tutti: Studenti, Professionisti e Pensionati</h2>
+
+      <p>
+        La bellezza di PAR🇮🇹LE è che davvero chiunque può giocarci. 
+        Ho visto mia nonna settantenne divertirsi quanto mio nipote adolescente. 
+        È uno di quei rari giochi che unisce le generazioni.
+      </p>
+
+      <p>
+        Per gli studenti è utile per ampliare il vocabolario. I professionisti lo usano 
+        come pausa veloce durante la giornata lavorativa. E per chi sta imparando l'italiano? 
+        È un modo fantastico per fare pratica senza annoiarsi con i libri di grammatica.
+      </p>
+
+      <h2>Consigli Pratici per Migliorare il Tuo Gioco</h2>
+
+      <p>
+        Dopo mesi di gioco quotidiano, ho notato alcuni pattern. 
+        Le parole di PAR🇮🇹LE tendono a essere termini di uso comune. 
+        Difficilmente troverai parole troppo tecniche o arcaiche.
+      </p>
+
+      <p>
+        Quando sei bloccato, pensa a parole che usi nella vita di tutti i giorni. 
+        Oggetti della casa, azioni quotidiane, sentimenti comuni. 
+        Spesso la soluzione è più semplice di quanto pensi.
+      </p>
+
+      <p>
+        Un altro trucco: se hai trovato tre o quattro lettere ma non riesci a completare la parola, 
+        prova a dirla ad alta voce. A volte l'orecchio cattura qualcosa che gli occhi non vedono.
+      </p>
+
+      <h2>La Comunità di PAR🇮🇹LE</h2>
+
+      <p>
+        Una delle cose più belle di questo gioco è la comunità che si è creata intorno. 
+        Sui social vedi persone che condividono i loro risultati, 
+        si sfidano a vicenda, si danno consigli senza spoilerare la soluzione.
+      </p>
+
+      <p>
+        C'è un senso di appartenenza. Tutti stanno provando a indovinare la stessa parola. 
+        Tutti hanno gli stessi sei tentativi. È una sfida condivisa che crea connessione, 
+        anche tra persone che non si conoscono.
+      </p>
+
+      <h2>Perché Dovresti Provare PAR🇮🇹LE Oggi</h2>
+
+      <p>
+        Se non hai ancora giocato a PAR🇮🇹LE, ti stai perdendo qualcosa di speciale. 
+        Non è solo un passatempo. È un piccolo momento quotidiano che ti fa staccare, 
+        ti fa pensare, ti fa sentire parte di qualcosa di più grande.
+      </p>
+
+      <p>
+        Non serve essere esperti di parole crociate o appassionati di giochi linguistici. 
+        Basta avere voglia di dedicare cinque minuti a una piccola sfida personale. 
+        E chi lo sa? Magari diventerà anche per te quella cosa che fai ogni mattina 
+        prima ancora di controllare le email.
+      </p>
+
+      <p>
+        La parola di oggi ti aspetta. Sei pronto a scoprirla?
+      </p>
+    </article>
+
   </body>
 </html>
