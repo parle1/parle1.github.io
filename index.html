@@ -171,9 +171,49 @@
       (function () {
         window.wordle = window.wordle || {};
         window.wordle.hash = 'parle v220317';
+        window.wordle.unlimitedMode = true;
       })();
     </script>
     <script src="wordle-it.js"></script>
+    <script>
+      // Override timer and make game unlimited
+      setInterval(function() {
+        // Remove any timer elements
+        const timers = document.querySelectorAll('[class*="timer"], [class*="Timer"], [id*="timer"], [id*="Timer"]');
+        timers.forEach(timer => timer.remove());
+        
+        // Check for game end modal and add instant restart
+        const modal = document.querySelector('game-modal');
+        if (modal && modal.getAttribute('open') !== null) {
+          // Check if restart button exists
+          let restartBtn = document.querySelector('#instant-restart-btn');
+          if (!restartBtn) {
+            const modalContent = modal.shadowRoot || modal;
+            const existingButton = modalContent.querySelector('button');
+            if (existingButton) {
+              restartBtn = document.createElement('button');
+              restartBtn.id = 'instant-restart-btn';
+              restartBtn.textContent = 'Gioca Ancora';
+              restartBtn.style.cssText = 'background: var(--green); color: white; padding: 12px 24px; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px;';
+              restartBtn.onclick = function() {
+                location.reload();
+              };
+              existingButton.parentNode.appendChild(restartBtn);
+            }
+          }
+        }
+      }, 500);
+      
+      // Force game to be available immediately
+      if (typeof localStorage !== 'undefined') {
+        // Clear any timer-related localStorage
+        Object.keys(localStorage).forEach(key => {
+          if (key.includes('timer') || key.includes('lastPlayed') || key.includes('nextGame')) {
+            localStorage.removeItem(key);
+          }
+        });
+      }
+    </script>
     <game-app></game-app>
     
     <!-- Article Section -->
